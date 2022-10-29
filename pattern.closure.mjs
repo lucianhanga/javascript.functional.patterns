@@ -17,8 +17,11 @@ function closure_func(param1, param2) {
 }
 
 const f1 = closure_func(10,100)
+const f2 = closure_func(1000, 10000)
 console.log(f1(1))
+console.log(f2(1))
 console.log(f1(2))
+console.log(f2(2))
 
 //
 // closure as a class
@@ -45,3 +48,17 @@ console.log(james.to_string())
 const thomas = james.clone()
 thomas.set_name("thomas")
 console.log(thomas.to_string())
+
+
+/*
+A closure is a data structure that binds a function to its environment at the moment 
+it’s declared. It’s based on the textual location of the function declaration; 
+therefore, a closure is also called a _static_ or _lexical_ scope surrounding 
+the function definition. 
+
+Because it gives functions access to its surrounding state, it makes code clear 
+and readable. As you’ll see shortly, closures are instrumental not only in 
+functional programs when you’re working with higher-order functions, but also for 
+event-handling and callbacks, emulating private variables, and mitigating some 
+of JavaScript’s pitfalls.
+*/
